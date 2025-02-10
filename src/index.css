@@ -35,6 +35,16 @@ h1 {
   line-height: 1.1;
 }
 
+.title {
+  font-family: "Lavishly Yours", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.big {
+  font-size: 16rem;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

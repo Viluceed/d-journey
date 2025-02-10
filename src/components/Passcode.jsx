@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import cardDisplay from "../assets/react.svg";
+import cardDisplay from "../assets/val.png";
 
 // const ACTIONS = { ADD_DIGIT: 'add-digit', CLEAR: 'clear', SUBMIT: 'submit'}
 
@@ -29,22 +29,23 @@ const keypadNumbers = [
         display.value = ''
       } if (id == "[object Object]-2") {
           if (display.value == "0429") {
-            navigate("/invitation")
+            navigate("/journey/invitation")
           }
       }
     };
   return(
     <Container>
-      <Card className="p-0 primary-color bg-gradient">
+      <Card className="p-0 primary-color">
         <Card.Title className='pt-4'>Enter Passcode</Card.Title>
         <Card.Body>
-          <div className='d-flex gap-3'>
-            <CardGroup>
-              <Card style={{ width: '20rem' }} className="d-flex justify-content-center">
-                <Image src={cardDisplay} rounded/>
+          <div className='d-flex gap-3 primary-color'>
+            <CardGroup className="primary-color">
+
+              <Card style={{ width: '20rem' }} className="bg-transparent border-0 justify-content-center">
+                <Image src={cardDisplay} className="p-2" rounded/>
               </Card>
 
-              <Card style={{ width: '20rem' }} className='d-flex'>
+              <Card style={{ width: '20rem' }} className='bg-transparent border-0 d-flex'>
                 <Container>
                   <input type="password" id='output' className='pin-value'/>
 

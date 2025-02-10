@@ -19,7 +19,7 @@
 }
 
 .primary-color {
-  background-color: #b8cbd4;
+  background: linear-gradient(45deg, #bbe9ff, #b8cbd4);
 }
 
 @keyframes logo-spin {
@@ -54,5 +54,13 @@
   border: none;
   color: black;
   outline: none;
+}
+
+.offset-up {
+  transform: translateY(-3rem);
+}
+
+.offset-down {
+  transform: translateY(5rem);
 }
 
