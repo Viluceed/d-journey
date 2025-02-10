@@ -34,7 +34,7 @@ function Invitation() {
       </div>
       <div className=' justify-content-center align-items-center'>
         <p className='title'  style={{ fontSize: "3rem" }}>Will you be my valentine?</p>
-        <Button href='/congrats' className='btn-lg rounded-pill m-2' variant='outline-success'>
+        <Button href='/d-journey/congrats' className='btn-lg rounded-pill m-2' variant='outline-success'>
         Yes
         </Button>
         <Button 

@@ -5,7 +5,7 @@ function Main() {
   return(
     <Container className='offset-up'>
       <h1 className='big title'>D' journey</h1>
-      <Button href='/login' className='rounded-pill' variant='outline-primary'>See more</Button>
+      <Button href='/d-journey/login' className='rounded-pill' variant='outline-primary'>See more</Button>
     </Container>
   )
 };
