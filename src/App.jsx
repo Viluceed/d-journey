@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter  as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.css'
@@ -11,10 +11,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/journey" element={<Main />} />
-        <Route path="/journey/login" element={<Passcode />} />
-        <Route path="/journey/invitation" element={<Invitation />} />
-        <Route path="/journey/congrats" element={<Congrats />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Passcode />} />
+        <Route path="/invitation" element={<Invitation />} />
+        <Route path="/congrats" element={<Congrats />} />
       </Routes>
     </Router>
   )

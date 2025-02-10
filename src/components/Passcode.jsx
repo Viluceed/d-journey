@@ -29,7 +29,7 @@ const keypadNumbers = [
         display.value = ''
       } if (id == "[object Object]-2") {
           if (display.value == "0429") {
-            navigate("/journey/invitation")
+            navigate("/invitation")
           }
       }
     };
