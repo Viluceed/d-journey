@@ -10,13 +10,14 @@ function Congrats() {
   function calculateTimeElapsed() {
     const startDate = new Date("2024-04-29T00:00:00");
     const currentDateTime = new Date();
-    const totalSeconds = Math.floor(currentDateTime - startDate / 1000);
+    const totalSeconds = Math.floor((currentDateTime - startDate) / 1000);
 
-    const hours = Math.floor((totalSeconds / 3600));
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds =totalSeconds % 60;
 
-    return {hours:hours, minutes:minutes, seconds:seconds}
+    return {days:days, hours:hours, minutes:minutes, seconds:seconds}
   }
 
   useEffect(() => {
@@ -29,12 +30,13 @@ function Congrats() {
 
   return(
     <Container>
-      <img src={gif1}  style={{ position: "fixed", bottom: "5rem", right: "5rem" }} />
-      <img src={gif2}  style={{ position: "fixed", bottom: "5rem", left: "5rem" }} />
-      <img src={gif3} />
-      <div className="body offset-up">
-        <h1>Time since:</h1>
-        <p>{timeElapsed.hours}h : {timeElapsed.minutes}m : {timeElapsed.seconds}s</p>
+      <img src={gif1} style={{ position: "fixed", bottom: "5rem", right: "5rem" }} />
+      <img src={gif2} style={{ position: "fixed", bottom: "5rem", left: "5rem" }} />
+      <img src={gif3} style={{ position: "fixed", top: "8rem", left: "50%", transform: "translateX(-50%)" }}/>
+      <div className="body offset-up mt-4">
+        <h1 className='pb-3'>YAAAAYYY!! I'm so excited to be with you!!</h1>
+        <h1>Together for:</h1>
+        <p style={{ fontSize: "2rem" }}>{timeElapsed.days}d : {timeElapsed.hours}h : {timeElapsed.minutes}m : {timeElapsed.seconds}s</p>
       </div>
     </Container>
   )
