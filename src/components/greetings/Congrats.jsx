@@ -35,7 +35,7 @@ function Congrats() {
       <img src={gif3} style={{ position: "fixed", top: "8rem", left: "50%", transform: "translateX(-50%)" }}/>
       <div className="body offset-up mt-4">
         <h1 className='pb-3'>YAAAAYYY!! I'm so excited to be with you!!</h1>
-        <h1>Together for:</h1>
+        <h1>Been together for:</h1>
         <p style={{ fontSize: "2rem" }}>{timeElapsed.days}d : {timeElapsed.hours}h : {timeElapsed.minutes}m : {timeElapsed.seconds}s</p>
       </div>
     </Container>

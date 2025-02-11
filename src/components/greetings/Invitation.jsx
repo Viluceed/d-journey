@@ -1,6 +1,7 @@
 import './Invitation.css'
 import Button from 'react-bootstrap/Button';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Invitation() {
   const OnHoverHandler = (e) => {
@@ -33,21 +34,33 @@ function Invitation() {
         </div>
       </div>
       <div className=' justify-content-center align-items-center'>
-        <p className='title'  style={{ fontSize: "3rem" }}>Will you be my valentine?</p>
-        <Button href='/d-journey/congrats' className='btn-lg rounded-pill m-2' variant='outline-success'>
-        Yes
-        </Button>
-        <Button 
-          className='rounded-pill btn-lg' 
-          variant='outline-danger' 
-          onMouseEnter={OnHoverHandler} 
-          style={{
-            position: "absolute", left: "50%",
-            top: "50%",
-            transform: "translate(-50%, -50%)",
-            transition: "top 0.3s, left 0.3s" }}>
-        No
-        </Button>
+        <Row>
+          <Col>
+            <p className='title'  style={{ fontSize: "3rem" }}>Will you be my valentine?</p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <Button 
+              href='/d-journey/congrats' 
+              className='btn-lg rounded-pill m-2' 
+              variant='outline-success'>
+              Yes
+            </Button>
+          </Col>
+          <Col>
+            <Button 
+              className='rounded-pill btn-lg m-2' 
+              variant='outline-danger' 
+              onMouseEnter={OnHoverHandler} 
+              style={{
+                position: "absolute",
+                transition: "top 0.3s, left 0.3s" }}>
+              No
+            </Button>
+          </Col>
+        </Row>
       </div>
     </div>
   )
